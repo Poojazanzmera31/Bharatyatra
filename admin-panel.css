@@ -1,0 +1,396 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f9;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    height: 100vh;
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.logo h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    border-bottom: 1px solid #34495e;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar nav ul li:hover {
+    background-color: #34495e;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #34495e;
+    padding: 0;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #1abc9c;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+}
+
+header h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.slider img {
+    width: 100%;
+    border-radius: 8px;
+}body {
+font-family: Arial, sans-serif;
+margin: 20px;
+}
+
+h1, h2 {
+color: #333;
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 20px;
+}
+
+table, th, td {
+border: 1px solid #ddd;
+}
+
+th, td {
+padding: 8px;
+text-align: left;
+}
+
+th {
+background-color: #f2f2f2;
+}
+/* Basic styles for layout */
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f4f6f9;
+}
+
+.container {
+display: flex;
+}
+
+.sidebar {
+width: 250px;
+background-color: #2c3e50;
+color: white;
+height: 100vh;
+padding-top: 20px;
+position: fixed;
+top: 0;
+left: 0;
+}
+
+.logo h2 {
+text-align: center;
+color: white;
+margin-bottom: 30px;
+}
+
+.sidebar nav ul {
+list-style-type: none;
+padding: 0;
+}
+
+.sidebar nav ul li {
+padding: 15px;
+text-align: center;
+cursor: pointer;
+border-bottom: 1px solid #34495e;
+}
+
+.sidebar nav ul li a {
+color: white;
+text-decoration: none;
+display: block;
+}
+
+.sidebar nav ul li:hover {
+background-color: #34495e;
+}
+
+.dropdown-content {
+display: none;
+background-color: #34495e;
+padding: 0;
+}
+
+.dropdown-content a {
+color: white;
+padding: 10px;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+
+.dropdown-content a:hover {
+background-color: #1abc9c;
+}
+.dropdown-content1 {
+display: none;
+background-color: #34495e;
+padding: 0;
+}
+
+.dropdown-content1 a {
+color: white;
+padding: 10px;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+
+.dropdown-content1 a:hover {
+background-color: #1abc9c;
+}
+.main-content {
+margin-left: 250px;
+padding: 20px;
+width: calc(100% - 250px);
+position: relative;
+}
+
+header h1 {
+color: #2c3e50;
+text-align: center;
+margin-bottom: 20px;
+}
+
+/* Slider container */
+.slider {
+position: relative;
+width: 100%;
+max-width: 1000px; /* Adjust as needed */
+margin: auto;
+overflow: hidden;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Form styles */
+.form-container {
+background-color: #fff;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+width: 400px;
+margin: 20px auto;
+display: none; /* Hidden by default */
+}
+
+.form-container h2 {
+text-align: center;
+color: #333;
+margin-bottom: 20px;
+font-size: 24px;
+}
+
+.form-container label {
+display: block;
+margin-bottom: 8px;
+font-weight: bold;
+color: #555;
+}
+
+.form-container input[type="text"],
+.form-container input[type="file"] {
+width: 100%;
+padding: 10px;
+margin-bottom: 15px;
+border: 1px solid #ddd;
+border-radius: 5px;
+font-size: 14px;
+}
+
+.form-container input[type="submit"] {
+width: 100%;
+padding: 10px;
+background-color: #28a745;
+border: none;
+color: white;
+border-radius: 5px;
+cursor: pointer;
+font-size: 16px;
+}
+
+.form-container input[type="submit"]:hover {
+background-color: #218838;
+}
+.form{
+width: 200px;
+}
+table {
+width: auto;
+border-collapse: collapse;
+margin: 20px 0;
+font-size: 18px;
+text-align: left;
+}
+th, td {
+padding: 12px;
+border-bottom: 1px solid #ddd;
+}
+th {
+background-color: #2c3e50;
+color: white;
+}
+tr:hover {
+background-color: #f5f5f5;
+}
+.error-message {
+color: red;
+text-align: center;
+margin-bottom: 10px;
+}
+.packages-container table {
+width: 100%;
+table-layout: fixed; /* Ensures table cells are a fixed width */
+}
+
+.packages-container td {
+word-wrap: break-word; /* Forces words to break within the cell */
+vertical-align: top; /* Aligns the content to the top of the cell */
+}
+
+.truncate-text {
+max-width: 200px; /* Adjust this as needed */
+white-space: nowrap; /* Keep the text in one line */
+overflow: hidden; /* Hide any overflow text */
+text-overflow: ellipsis; /* Add ellipsis (...) for overflowing text */
+}
+
+/* Optional: Limit width for the entire table */
+.packages-container {
+overflow-x: auto; /* Enable horizontal scrolling if the table overflows */
+}
+/* eral dashboard tile styling */
+.dashboard-tile {
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    transition: transform 0.2s;
+}
+/* Media query for tablets (screens smaller than 768px) */
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+
+    .dashboard-tile {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .form-container {
+        width: 90%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    .truncate-text {
+        max-width: 150px; /* Reduce width for smaller screens */
+    }
+}
+
+/* Media query for mobile phones (screens smaller than 576px) */
+@media only screen and (max-width: 576px) {
+    .sidebar {
+        width: 150px;
+    }
+
+    .main-content {
+        margin-left: 150px;
+        width: calc(100% - 150px);
+    }
+
+    .dashboard-tile {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    .truncate-text {
+        max-width: 100px; /* Further reduce width for mobile screens */
+    }
+
+    /* Hide unnecessary elements on small screens */
+    .slider {
+        display: none; /* Example of hiding slider on small devices */
+    }
+}
+
+/* Media query for larger screens (screens larger than 1200px) */
+@media only screen and (min-width: 1200px) {
+    .main-content {
+        margin-left: 300px;
+        width: calc(100% - 300px);
+    }
+
+    .sidebar {
+        width: 300px;
+    }
+}

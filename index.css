@@ -1,0 +1,129 @@
+.content {
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    color: white;
+    position: relative;
+    padding-left: 20px;
+}
+
+.content .par {
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    padding-top: 10px;
+    line-height: 30px;
+}
+
+.content h1 {
+    font-family: 'Times New Roman';
+    font-size: 50px;
+    padding-left: 10px;
+    padding-top: 150px;
+    letter-spacing: 2px;
+}
+
+.content .cn {
+    width: 160px;
+    height: 40px;
+    background: green;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+}
+
+.content .cn a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease;
+    font-weight: bold;
+}
+
+.cn:hover {
+    background-color: black;
+}
+
+.content span {
+    color: green;
+    font-size: 50px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    .content {
+        width: 90%; /* Adjust width for mobile */
+        padding-left: 10px; /* Reduce padding */
+    }
+
+    .content h1 {
+        font-size: 30px; /* Smaller heading size */
+        padding-top: 50px; /* Reduce top padding */
+    }
+
+    .content .par {
+        font-size: 14px; /* Smaller paragraph text */
+        line-height: 22px; /* Reduce line height */
+    }
+
+    .content .cn {
+        width: 100%; /* Full width for button */
+        margin-left: 0; /* Center button */
+    }
+
+    .content span {
+        font-size: 30px; /* Smaller span text */
+    }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    .content {
+        width: 80%; /* Slightly smaller width */
+    }
+
+    .content h1 {
+        font-size: 40px; /* Medium heading size */
+        padding-top: 100px; /* Moderate top padding */
+    }
+
+    .content .par {
+        font-size: 16px; /* Medium paragraph text */
+    }
+
+    .content .cn {
+        width: 150px; /* Adjust button width */
+    }
+
+    .content span {
+        font-size: 40px; /* Medium span text */
+    }
+}
+
+/* Small Desktops */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .content {
+        width: 70%; /* Reduce width for small desktops */
+    }
+
+    .content h1 {
+        font-size: 45px; /* Standard heading size */
+    }
+}
+
+/* Large Desktops */
+@media (min-width: 1025px) {
+    .content {
+        width: 1200px; /* Maintain original width */
+    }
+
+    .content h1 {
+        font-size: 50px; /* Larger heading size */
+    }
+}

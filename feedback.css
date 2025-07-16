@@ -1,0 +1,96 @@
+    /* General styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    
+    main {
+        padding: 0;
+    }
+
+    .feedback-section,
+    .reviews-section {
+        margin-bottom: 30px;
+    }
+
+    .feedback-form label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .feedback-form input[type="text"],
+    .feedback-form input[type="email"],
+    .feedback-form select,
+    .feedback-form textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .feedback-section .btn {
+        width: 160px;
+        height: 40px;
+        background: green;
+        border: none;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        font-size: 18px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.4s ease;
+    }
+
+    .feedback-section .btn a {
+        text-decoration: none;
+        color: white;
+        transition: 0.3s ease;
+        font-weight: bold;
+    }
+
+    .btn:hover {
+        background-color: black;
+    }
+
+    .success-message {
+        color: green;
+        font-weight: bold;
+    }
+
+    .error-message {
+        color: red;
+        font-weight: bold;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+        .feedback-section .btn {
+            width: 100%; /* Full width buttons on smaller screens */
+            margin-left: 0; /* Remove left margin for centering */
+        }
+        
+        .feedback-form input[type="text"],
+        .feedback-form input[type="email"],
+        .feedback-form select,
+        .feedback-form textarea {
+            font-size: 16px; /* Adjust font size for better readability */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .feedback-form input[type="text"],
+        .feedback-form input[type="email"],
+        .feedback-form select,
+        .feedback-form textarea {
+            font-size: 14px; /* Further reduce font size for small screens */
+        }
+
+        .feedback-section .btn {
+            height: 35px; /* Adjust button height for small screens */
+        }
+    }

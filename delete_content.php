@@ -1,0 +1,67 @@
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+// Database connection
+$conn = new mysqli("localhost", "root", "", "bharatyatra_db");
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Check if ID is provided in the URL
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+
+    // First, retrieve the tour_package_id to use it for checking bookings
+    $getTourPackageIdSql = "SELECT tour_package_id FROM content_package WHERE id = ?";
+    $stmt = $conn->prepare($getTourPackageIdSql);
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+    $stmt->bind_result($tourPackageId);
+    $stmt->fetch();
+    $stmt->close();
+
+    // If tour_package_id is found, check if it is linked to any bookings
+    if ($tourPackageId !== null) {
+        $checkBookingSql = "SELECT COUNT(*) FROM bookings WHERE tour_package = (SELECT tour_name FROM content_package WHERE id = ?)";
+        $stmt = $conn->prepare($checkBookingSql);
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $stmt->bind_result($bookingCount);
+        $stmt->fetch();
+        $stmt->close();
+
+        if ($bookingCount > 0) {
+            echo "<script>alert('This content cannot be deleted as it is associated with a booked package.'); window.location.href='admin-panel.php';</script>";
+        } else {
+            // Prepare a statement to delete the content
+            $sql = "DELETE FROM content_package WHERE id = ?";
+            $stmt = $conn->prepare($sql);
+
+            if ($stmt) {
+                // Bind parameters and execute the statement
+                $stmt->bind_param("i", $id);
+                if ($stmt->execute()) {
+                    echo "<script>alert('Content deleted successfully!'); window.location.href='admin-panel.php';</script>";
+                } else {
+                    echo "<script>alert('Error deleting content: " . $conn->error . "'); window.location.href='admin-panel.php';</script>";
+                }
+                // Close the statement
+                $stmt->close();
+            } else {
+                echo "<script>alert('Error preparing statement: " . $conn->error . "'); window.location.href='admin-panel.php';</script>";
+            }
+        }
+    } else {
+        echo "<script>alert('This content cannot be deleted as it is associated with a booked package.'); window.location.href='admin-panel.php';</script>";
+    }
+} else {
+    echo "<script>alert('No content ID provided.'); window.location.href='admin-panel.php';</script>";
+}
+
+// Close the database connection
+$conn->close();
+?>
